@@ -1,16 +1,17 @@
 import React from 'react';
-import Hero from './components/Hero';
-import Menu from './components/Menu';
-import About from './components/About';
-import Reservation from './components/Reservation';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import ReservationPage from './pages/ReservationPage';
 
 export default function App() {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-dark text-light">
-      <Hero />
-      <Menu />
-      <About />
-      <Reservation />
-    </div>
-  );
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/reservar" element={<ReservationPage />} />
+      </Routes>
+    </BrowserRouter>
+ );
 }
