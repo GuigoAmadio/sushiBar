@@ -13,6 +13,7 @@ const lemonZest = [
   { src: '/images/lemon3.png', x: -20, y: -70 },
 ];
 
+
 export default function Hero() {
   return (
     <section className="relative flex flex-col items-center justify-center h-screen bg-gradient-to-b from-dark to-black">
